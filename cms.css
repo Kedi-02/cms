@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .container {
+    display: grid;
+    grid-gap: 0.2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-evenly;
+    margin: 15px;
+  }
+  
+  #logo {
+    display: flex;
+    max-width: 60px;
+    max-height: 30px;
+    justify-content: flex-start;
+    margin: 15px;
+  }
+  
+  #logo:hover {
+    transform: scale(1.2);
+  }
+  
+  nav ul a {
+    color: rgb(0, 94, 128);
+    border-bottom: 3px solid rgba(255, 0, 0, 0.518);
+  }
+  
+  nav ul li:hover {
+    transform: scale(1.2);
+  }
+  
+  /* header {
+      grid-area: header;
+    } */
+  
+  header h1 {
+    /* Bildet jeg har tatt er fra Binärcode fra google */
+    background-image: url("../pictures/kode.jpg");
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    line-height: 400px;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+  
+  footer {
+    /* grid-area: footer; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 100px 5px;
+  }
+
+   .grid-table {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-gap: 1em; */
+
+    /* Denne gir boxene høyde */
+    /* grid-auto-rows: 100px; */
+
+    /* Denne under gjør det mer fleksibelt, kan skrive mer tekst inni boxen */
+    grid-auto-rows: minmax(50px, auto);
+    grid-auto-columns: 50px;
+    /* max-width: 10px; */
+    /* width: 1500px; */
+    /* justify-items: stretch; */
+    /* padding: 10px; */
+    /* margin: 10px; */
+    margin: 100px;
+  }
+
+  .grid-table div {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    vertical-align: center; 
+    flex-direction: column;
+    /* background: #eee; */
+    padding: 1em;
+    border: solid black;
+  } 
+
+  /* .grid-table div:nth-child(odd) {
+    background: #ddd;
+  } */
+
+  #cms {
+    width: 150px;
+    height: 150px;
+  }
+
+  #cms-losning {
+    width: 150px;
+    height: 150px;
+  }
+
+
+
+  /* .cmss {
+    max-width: 75%;
+  } */
+
+  #cms-article {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+    margin: 25px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center; */
+     /* text-align: center; */
+    /*background-color: gray;
+    float: left; */
+  }
+
+  #cms-pic {
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  #cms-article > p {
+    /* width: 80%; */
+    /* text-align: center; */
+    /* text-align: center; */
+    /* float: left; */
+  }
+
+  /* #cms-article figure {
+    float: right;
+    height: 90%;
+    width: 55%;
+  } */
+
+  .losning {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+    margin: 25px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    border: 10px solid #ccc;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .section p {
+    margin: 15px;
+    /* width: 80%; */
+    /* text-align: center; */
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 698px){
+    body {
+      background-color: brown;
+    }
+
+    .div-table {
+      display: grid;
+      justify-content: end;
+      align-items: center;
+      /* align-self: center; */
+      /* justify-self: center; */
+      /* place-items: center;  */
+      margin: auto;
+      width: 90%;
+    }
+    
+    .grid-table {
+      display: grid;
+      margin: auto;
+      /* min-width: 500px; */
+      grid-auto-rows: minmax(10px, auto);
+      /* grid-auto-columns: 10px; */
+      /* width: 500px; */
+      /* width: 500px; */
+      padding: 50px;
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* grid-auto-columns: minmax(30px, auto); */
+      /* grid-template-columns: repeat(2, 1fr); */
+      /* place-items: center; */
+    }
+  } 
+
+
+  @media only screen and (min-width: 699px) and (max-width: 750px){
+    body {
+      background-color: purple;
+    }
+    
+    .grid-table{
+      width: 80%;
+    padding: 0.5rem;
+    /* margin: 0 auto; */
+    margin: 25px;
+    }
+  } 
+
+
+  @media only screen and (min-width: 751px) and (max-width: 780px){
+    body {
+      background-color: brown;
+    }
+    
+    .grid-table {
+      /* grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);  */
+    /* margin: auto; */
+    margin: 60px;
+      /* grid-auto-columns: minmax(30px, auto); */
+      /* grid-template-columns: repeat(2, 1fr); */
+    }
+  } 
+
+  @media only screen and (min-width: 781px) and (max-width: 840px){
+    body {
+      background-color: red;
+    }
+    
+    .grid-table {
+      width: 80%;
+    padding: 0.5rem;
+    /* margin: 0 auto; */
+    margin: 55px;
+    }
+  } 
+
+  @media only screen and (min-width: 841px) and (max-width: 1199px) {
+    body {
+      background-color: orange;
+    }
+    
+    .grid-table {
+      /* grid-auto-columns: minmax(30px, auto); */
+      /* grid-template-columns: repeat(2, 1fr); */
+    }
+  } 
+
+  @media only screen and (min-width: 1200px) and (max-width: 1300px){
+    body {
+      background-color: blue;
+    }
+    
+    .grid-table {
+      
+  } 
+}
